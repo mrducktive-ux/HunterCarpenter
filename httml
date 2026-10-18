@@ -1,0 +1,2259 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#004225">
+
+  <meta name="description" content="Hunter Carpenter — rail enthusiast, aspiring KESR volunteer, and railway photographer from South UK.">
+
+  <title>Hunter Carpenter | Railway Portfolio</title>
+
+  <style>
+
+    :root {
+
+      --green: #004225;
+
+      --green-light: #075c38;
+
+      --gold: #ffd700;
+
+      --charcoal: #242a27;
+
+      --cream: #f7f5ed;
+
+      --white: #ffffff;
+
+      --muted: #68716b;
+
+      --border: #dedfd5;
+
+      --shadow: 0 8px 28px rgba(0, 40, 24, 0.09);
+
+    }
+
+    * {
+
+      box-sizing: border-box;
+
+      margin: 0;
+
+      padding: 0;
+
+    }
+
+    html {
+
+      scroll-behavior: smooth;
+
+      scroll-padding-top: 80px;
+
+    }
+
+    body {
+
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+
+        Roboto, Helvetica, Arial, sans-serif;
+
+      background: var(--cream);
+
+      color: var(--charcoal);
+
+      line-height: 1.7;
+
+      font-size: 16px;
+
+      -webkit-font-smoothing: antialiased;
+
+    }
+
+    a {
+
+      color: inherit;
+
+      text-decoration: none;
+
+    }
+
+    button,
+
+    input {
+
+      font: inherit;
+
+    }
+
+    button {
+
+      cursor: pointer;
+
+      -webkit-tap-highlight-color: transparent;
+
+    }
+
+    img {
+
+      display: block;
+
+      max-width: 100%;
+
+    }
+
+    .container {
+
+      width: min(100% - 36px, 1040px);
+
+      margin-inline: auto;
+
+    }
+
+    /* Navigation */
+
+    .navbar {
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 100;
+
+      background: rgba(0, 66, 37, 0.97);
+
+      color: var(--white);
+
+      border-bottom: 3px solid var(--gold);
+
+      backdrop-filter: blur(12px);
+
+    }
+
+    .nav-inner {
+
+      min-height: 65px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 14px;
+
+    }
+
+    .brand {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      font-weight: 800;
+
+      letter-spacing: -0.4px;
+
+    }
+
+    .brand-icon {
+
+      width: 38px;
+
+      height: 38px;
+
+      display: grid;
+
+      place-items: center;
+
+      background: var(--gold);
+
+      color: var(--green);
+
+      border-radius: 50%;
+
+      font-size: 21px;
+
+    }
+
+    .nav-links {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 18px;
+
+      font-size: 13px;
+
+      font-weight: 650;
+
+    }
+
+    .nav-links a {
+
+      opacity: 0.9;
+
+    }
+
+    .nav-links a:hover {
+
+      color: var(--gold);
+
+    }
+
+    /* Hero */
+
+    .hero {
+
+      position: relative;
+
+      overflow: hidden;
+
+      background: var(--green);
+
+      color: var(--white);
+
+      padding: 75px 0 72px;
+
+      border-bottom: 6px solid var(--gold);
+
+    }
+
+    .hero::before {
+
+      content: "";
+
+      position: absolute;
+
+      width: 340px;
+
+      height: 340px;
+
+      border: 35px solid rgba(255, 215, 0, 0.07);
+
+      border-radius: 50%;
+
+      right: -145px;
+
+      top: -125px;
+
+    }
+
+    .hero::after {
+
+      content: "";
+
+      position: absolute;
+
+      width: 210px;
+
+      height: 210px;
+
+      border: 2px solid rgba(255, 255, 255, 0.07);
+
+      border-radius: 50%;
+
+      right: -50px;
+
+      bottom: -135px;
+
+    }
+
+    .hero-content {
+
+      position: relative;
+
+      z-index: 1;
+
+      max-width: 760px;
+
+    }
+
+    .eyebrow {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 9px;
+
+      color: var(--gold);
+
+      text-transform: uppercase;
+
+      font-weight: 800;
+
+      font-size: 12px;
+
+      letter-spacing: 2px;
+
+      margin-bottom: 17px;
+
+    }
+
+    .eyebrow::before {
+
+      content: "";
+
+      width: 25px;
+
+      height: 3px;
+
+      background: var(--gold);
+
+    }
+
+    .hero h1 {
+
+      font-size: clamp(39px, 9vw, 68px);
+
+      line-height: 1.08;
+
+      letter-spacing: -2px;
+
+      margin-bottom: 20px;
+
+      font-weight: 850;
+
+    }
+
+    .hero h1 span {
+
+      color: var(--gold);
+
+    }
+
+    .hero-description {
+
+      max-width: 570px;
+
+      color: rgba(255, 255, 255, 0.86);
+
+      font-size: clamp(16px, 4vw, 19px);
+
+      line-height: 1.8;
+
+      margin-bottom: 28px;
+
+    }
+
+    .hero-buttons {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+    }
+
+    .btn {
+
+      min-height: 48px;
+
+      padding: 12px 20px;
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      border-radius: 7px;
+
+      font-weight: 750;
+
+      font-size: 14px;
+
+      border: 2px solid transparent;
+
+      transition: transform 0.2s, background 0.2s;
+
+    }
+
+    .btn:active {
+
+      transform: scale(0.97);
+
+    }
+
+    .btn-gold {
+
+      background: var(--gold);
+
+      color: var(--green);
+
+    }
+
+    .btn-gold:hover {
+
+      background: #ffe44d;
+
+    }
+
+    .btn-outline {
+
+      color: var(--white);
+
+      border-color: rgba(255, 255, 255, 0.5);
+
+    }
+
+    .btn-outline:hover {
+
+      background: rgba(255, 255, 255, 0.1);
+
+    }
+
+    /* Status strip */
+
+    .status-strip {
+
+      background: var(--white);
+
+      border-bottom: 1px solid var(--border);
+
+    }
+
+    .status-inner {
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      padding: 21px 0;
+
+      gap: 12px;
+
+    }
+
+    .status-item {
+
+      padding-left: 13px;
+
+      border-left: 3px solid var(--gold);
+
+      min-width: 0;
+
+    }
+
+    .status-label {
+
+      display: block;
+
+      font-size: 10px;
+
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1px;
+
+      color: var(--muted);
+
+      margin-bottom: 3px;
+
+    }
+
+    .status-value {
+
+      font-size: 13px;
+
+      font-weight: 750;
+
+      line-height: 1.5;
+
+    }
+
+    /* Sections */
+
+    section.content-section {
+
+      padding: 65px 0;
+
+    }
+
+    .section-heading {
+
+      margin-bottom: 30px;
+
+    }
+
+    .section-kicker {
+
+      display: block;
+
+      color: var(--green-light);
+
+      text-transform: uppercase;
+
+      font-size: 11px;
+
+      letter-spacing: 2px;
+
+      font-weight: 850;
+
+      margin-bottom: 8px;
+
+    }
+
+    .section-heading h2 {
+
+      font-size: clamp(28px, 6vw, 39px);
+
+      line-height: 1.2;
+
+      letter-spacing: -1px;
+
+      color: var(--green);
+
+      margin-bottom: 10px;
+
+    }
+
+    .section-heading p {
+
+      color: var(--muted);
+
+      max-width: 620px;
+
+    }
+
+    /* About */
+
+    .about-grid {
+
+      display: grid;
+
+      grid-template-columns: 1.2fr 0.8fr;
+
+      gap: 28px;
+
+      align-items: stretch;
+
+    }
+
+    .about-card,
+
+    .interest-card {
+
+      background: var(--white);
+
+      border: 1px solid var(--border);
+
+      border-radius: 12px;
+
+      padding: 25px;
+
+      box-shadow: var(--shadow);
+
+    }
+
+    .about-card p + p {
+
+      margin-top: 15px;
+
+    }
+
+    .about-card p {
+
+      color: #4b554e;
+
+    }
+
+    .interest-card {
+
+      background: var(--green);
+
+      color: var(--white);
+
+      border-color: var(--green);
+
+    }
+
+    .interest-card h3 {
+
+      color: var(--gold);
+
+      font-size: 19px;
+
+      margin-bottom: 17px;
+
+    }
+
+    .train-badge {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      padding: 14px 12px;
+
+      margin-top: 12px;
+
+      border-radius: 8px;
+
+      background: rgba(255, 255, 255, 0.09);
+
+      border: 1px solid rgba(255, 255, 255, 0.15);
+
+    }
+
+    .train-number {
+
+      flex-shrink: 0;
+
+      min-width: 59px;
+
+      text-align: center;
+
+      padding: 7px 5px;
+
+      background: var(--gold);
+
+      color: var(--green);
+
+      border-radius: 5px;
+
+      font-weight: 900;
+
+      font-size: 12px;
+
+    }
+
+    .train-badge strong {
+
+      display: block;
+
+      font-size: 14px;
+
+    }
+
+    .train-badge small {
+
+      display: block;
+
+      color: rgba(255, 255, 255, 0.76);
+
+      font-size: 12px;
+
+    }
+
+    .interest-note {
+
+      font-size: 12px;
+
+      margin-top: 18px;
+
+      color: rgba(255, 255, 255, 0.75);
+
+    }
+
+    /* Volunteer journal */
+
+    .journal-section {
+
+      background: #eeeee5;
+
+      border-block: 1px solid var(--border);
+
+    }
+
+    .journal-card {
+
+      background: var(--white);
+
+      border: 1px solid var(--border);
+
+      border-radius: 12px;
+
+      padding: 28px;
+
+      box-shadow: var(--shadow);
+
+    }
+
+    .journal-banner {
+
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 14px;
+
+      padding-bottom: 23px;
+
+      margin-bottom: 24px;
+
+      border-bottom: 1px solid var(--border);
+
+    }
+
+    .journal-icon {
+
+      width: 47px;
+
+      height: 47px;
+
+      display: grid;
+
+      place-items: center;
+
+      flex-shrink: 0;
+
+      background: var(--green);
+
+      color: var(--gold);
+
+      border-radius: 9px;
+
+      font-size: 24px;
+
+    }
+
+    .journal-banner h3 {
+
+      color: var(--green);
+
+      font-size: 18px;
+
+      margin-bottom: 4px;
+
+    }
+
+    .journal-banner p {
+
+      color: var(--muted);
+
+      font-size: 13px;
+
+    }
+
+    .timeline {
+
+      display: grid;
+
+      gap: 22px;
+
+    }
+
+    .timeline-item {
+
+      position: relative;
+
+      padding-left: 24px;
+
+      border-left: 2px solid #d8dfd6;
+
+    }
+
+    .timeline-item::before {
+
+      content: "";
+
+      position: absolute;
+
+      width: 10px;
+
+      height: 10px;
+
+      left: -6px;
+
+      top: 7px;
+
+      border-radius: 50%;
+
+      background: var(--gold);
+
+      border: 2px solid var(--green);
+
+    }
+
+    .timeline-item h4 {
+
+      color: var(--green);
+
+      font-size: 15px;
+
+      margin-bottom: 5px;
+
+    }
+
+    .timeline-item p {
+
+      font-size: 14px;
+
+      color: var(--muted);
+
+    }
+
+    .entry-date {
+
+      display: inline-block;
+
+      margin-bottom: 6px;
+
+      font-size: 10px;
+
+      letter-spacing: 1px;
+
+      font-weight: 850;
+
+      color: #7c6710;
+
+      text-transform: uppercase;
+
+    }
+
+    .journal-footnote {
+
+      background: #f5f4ed;
+
+      border-radius: 7px;
+
+      padding: 13px;
+
+      margin-top: 24px;
+
+      font-size: 12px;
+
+      color: var(--muted);
+
+    }
+
+    /* Gallery */
+
+    .gallery-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+
+      gap: 13px;
+
+    }
+
+    .gallery-item {
+
+      position: relative;
+
+      min-width: 0;
+
+      overflow: hidden;
+
+      aspect-ratio: 4 / 3;
+
+      background: #e3e5dc;
+
+      border: 1px solid var(--border);
+
+      border-radius: 10px;
+
+    }
+
+    .gallery-item img {
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+      transition: transform 0.35s;
+
+    }
+
+    .gallery-item:hover img {
+
+      transform: scale(1.04);
+
+    }
+
+    .gallery-placeholder {
+
+      width: 100%;
+
+      height: 100%;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      flex-direction: column;
+
+      gap: 8px;
+
+      padding: 12px;
+
+      text-align: center;
+
+      color: #627067;
+
+    }
+
+    .gallery-placeholder span {
+
+      font-size: 32px;
+
+    }
+
+    .gallery-placeholder strong {
+
+      font-size: 12px;
+
+    }
+
+    .gallery-placeholder small {
+
+      font-size: 10px;
+
+    }
+
+    .gallery-caption {
+
+      position: absolute;
+
+      bottom: 0;
+
+      left: 0;
+
+      right: 0;
+
+      padding: 23px 10px 10px;
+
+      color: white;
+
+      font-size: 12px;
+
+      font-weight: 750;
+
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+
+    }
+
+    .gallery-empty-note {
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      margin-top: 17px;
+
+    }
+
+    /* Signal box login */
+
+    .admin-area {
+
+      margin-top: 34px;
+
+      padding: 23px 18px;
+
+      background: #e9e7db;
+
+      border: 1px solid #d5d3c4;
+
+      border-radius: 12px;
+
+      text-align: center;
+
+    }
+
+    .admin-area h3 {
+
+      font-size: 17px;
+
+      color: var(--green);
+
+      margin-bottom: 5px;
+
+    }
+
+    .admin-area > p {
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      margin-bottom: 18px;
+
+    }
+
+    .signal-key {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 11px;
+
+      padding: 13px 21px;
+
+      background: var(--green);
+
+      color: var(--gold);
+
+      border: 3px solid #b6a64e;
+
+      border-radius: 7px;
+
+      font-size: 13px;
+
+      font-weight: 850;
+
+      box-shadow: 0 4px 0 #00301b;
+
+      transition: transform 0.15s;
+
+    }
+
+    .signal-key:active {
+
+      transform: translateY(3px);
+
+      box-shadow: 0 1px 0 #00301b;
+
+    }
+
+    .key-symbol {
+
+      font-size: 21px;
+
+      line-height: 1;
+
+    }
+
+    .login-message {
+
+      font-size: 13px;
+
+      margin-top: 12px;
+
+      color: var(--green);
+
+    }
+
+    .upload-panel {
+
+      display: none;
+
+      margin-top: 23px;
+
+      padding: 20px;
+
+      text-align: left;
+
+      border: 1px dashed var(--green);
+
+      border-radius: 9px;
+
+      background: var(--white);
+
+    }
+
+    .upload-panel.visible {
+
+      display: block;
+
+    }
+
+    .upload-panel h4 {
+
+      color: var(--green);
+
+      font-size: 17px;
+
+      margin-bottom: 5px;
+
+    }
+
+    .upload-panel p {
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      margin-bottom: 14px;
+
+    }
+
+    .file-input {
+
+      display: block;
+
+      width: 100%;
+
+      padding: 12px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 7px;
+
+      background: var(--cream);
+
+      color: var(--charcoal);
+
+      font-size: 12px;
+
+    }
+
+    .upload-actions {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+      margin-top: 13px;
+
+    }
+
+    .small-btn {
+
+      border: 0;
+
+      border-radius: 6px;
+
+      padding: 10px 14px;
+
+      background: var(--green);
+
+      color: var(--white);
+
+      font-size: 12px;
+
+      font-weight: 800;
+
+    }
+
+    .small-btn.secondary {
+
+      background: #e9e9e2;
+
+      color: var(--charcoal);
+
+    }
+
+    .upload-status {
+
+      margin-top: 12px;
+
+      font-size: 12px;
+
+      color: var(--green);
+
+      overflow-wrap: anywhere;
+
+    }
+
+    .security-note {
+
+      margin-top: 17px;
+
+      color: #7c5a12;
+
+      font-size: 11px;
+
+      text-align: left;
+
+    }
+
+    /* Footer */
+
+    footer {
+
+      background: #002c19;
+
+      color: var(--white);
+
+      padding: 32px 0;
+
+      border-top: 5px solid var(--gold);
+
+    }
+
+    .footer-inner {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      gap: 18px;
+
+    }
+
+    .footer-title {
+
+      font-weight: 850;
+
+      font-size: 15px;
+
+      margin-bottom: 4px;
+
+    }
+
+    .footer-copy {
+
+      color: rgba(255, 255, 255, 0.65);
+
+      font-size: 11px;
+
+    }
+
+    .footer-badge {
+
+      border: 1px solid rgba(255, 215, 0, 0.45);
+
+      color: var(--gold);
+
+      border-radius: 5px;
+
+      padding: 7px 10px;
+
+      font-size: 10px;
+
+      font-weight: 800;
+
+      white-space: nowrap;
+
+    }
+
+    /* Tablet and mobile */
+
+    @media (max-width: 700px) {
+
+      .nav-inner {
+
+        min-height: 60px;
+
+      }
+
+      .brand {
+
+        font-size: 13px;
+
+      }
+
+      .nav-links {
+
+        gap: 12px;
+
+        font-size: 11px;
+
+      }
+
+      .hero {
+
+        padding: 58px 0;
+
+      }
+
+      .hero h1 {
+
+        letter-spacing: -1.4px;
+
+      }
+
+      section.content-section {
+
+        padding: 49px 0;
+
+      }
+
+      .about-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 17px;
+
+      }
+
+      .status-inner {
+
+        gap: 8px;
+
+      }
+
+      .status-item {
+
+        padding-left: 8px;
+
+      }
+
+      .status-label {
+
+        font-size: 9px;
+
+        letter-spacing: 0.5px;
+
+      }
+
+      .status-value {
+
+        font-size: 12px;
+
+      }
+
+      .about-card,
+
+      .interest-card {
+
+        padding: 21px;
+
+      }
+
+      .journal-card {
+
+        padding: 21px 17px;
+
+      }
+
+      .footer-inner {
+
+        align-items: flex-start;
+
+      }
+
+    }
+
+    @media (max-width: 380px) {
+
+      .container {
+
+        width: min(100% - 26px, 1040px);
+
+      }
+
+      .brand {
+
+        gap: 6px;
+
+        font-size: 12px;
+
+      }
+
+      .brand-icon {
+
+        width: 32px;
+
+        height: 32px;
+
+      }
+
+      .nav-links {
+
+        gap: 8px;
+
+        font-size: 10px;
+
+      }
+
+      .hero-buttons .btn {
+
+        width: 100%;
+
+      }
+
+      .status-inner {
+
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+      }
+
+      .status-item {
+
+        padding-left: 12px;
+
+      }
+
+      .footer-inner {
+
+        flex-direction: column;
+
+      }
+
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+
+        scroll-behavior: auto;
+
+      }
+
+      *,
+
+      *::before,
+
+      *::after {
+
+        transition-duration: 0.01ms !important;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <header class="navbar">
+
+    <div class="container nav-inner">
+
+      <a class="brand" href="#home" aria-label="Hunter Carpenter home">
+
+        <span class="brand-icon" aria-hidden="true">🚂</span>
+
+        <span>HUNTER CARPENTER</span>
+
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+
+        <a href="#about">About</a>
+
+        <a href="#journal">Journal</a>
+
+        <a href="#gallery">Gallery</a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <!-- 1. HERO SECTION -->
+
+    <section class="hero" id="home">
+
+      <div class="container hero-content">
+
+        <span class="eyebrow">My Railway Portfolio</span>
+
+        <h1>Hunter<br><span>Carpenter.</span></h1>
+
+        <p class="hero-description">
+
+          A passionate rail enthusiast from South UK, looking forward to
+
+          beginning my volunteering journey at the Kent &amp; East Sussex
+
+          Railway in 2027.
+
+        </p>
+
+        <div class="hero-buttons">
+
+          <a class="btn btn-gold" href="#about">Discover My Story →</a>
+
+          <a class="btn btn-outline" href="#gallery">Explore My Gallery</a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- QUICK DETAILS -->
+
+    <div class="status-strip">
+
+      <div class="container status-inner">
+
+        <div class="status-item">
+
+          <span class="status-label">Based In</span>
+
+          <span class="status-value">South UK 🇬🇧</span>
+
+        </div>
+
+        <div class="status-item">
+
+          <span class="status-label">Railway</span>
+
+          <span class="status-value">KESR · 2027</span>
+
+        </div>
+
+        <div class="status-item">
+
+          <span class="status-label">My Passion</span>
+
+          <span class="status-value">Heritage Rail</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- 2. ABOUT ME -->
+
+    <section class="content-section" id="about">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="section-kicker">The Person Behind The Passion</span>
+
+          <h2>About Me</h2>
+
+          <p>
+
+            A little introduction to me, my railway interests and the journey
+
+            ahead.
+
+          </p>
+
+        </div>
+
+        <div class="about-grid">
+
+          <article class="about-card">
+
+            <p>
+
+              Hello! I'm <strong>Hunter Carpenter</strong>, a 13-year-old rail
+
+              enthusiast from the south of the United Kingdom. Railways have
+
+              always fascinated me, from the engineering behind the trains
+
+              to the history and atmosphere of Britain's railway network.
+
+            </p>
+
+            <p>
+
+              I'm especially interested in heritage steam railways and the
+
+              regional diesel trains that have served communities throughout
+
+              Britain. I love learning about railway operations, locomotive
+
+              history, different train classes and the people who keep our
+
+              railways running.
+
+            </p>
+
+            <p>
+
+              In 2027, I look forward to beginning my volunteering journey at
+
+              the <strong>Kent &amp; East Sussex Railway (KESR)</strong>.
+
+              I'm excited to learn more, gain experience and become involved
+
+              in preserving railway heritage.
+
+            </p>
+
+            <p>
+
+              This website is my personal space to document my railway
+
+              interests, share photography and record milestones along the
+
+              way.
+
+            </p>
+
+          </article>
+
+          <aside class="interest-card">
+
+            <h3>🚆 My Favourite Trains</h3>
+
+            <div class="train-badge">
+
+              <span class="train-number">CLASS 142</span>
+
+              <div>
+
+                <strong>The Pacer</strong>
+
+                <small>A distinctive British rail icon</small>
+
+              </div>
+
+            </div>
+
+            <div class="train-badge">
+
+              <span class="train-number">CLASS 150</span>
+
+              <div>
+
+                <strong>The Sprinter</strong>
+
+                <small>A classic regional diesel unit</small>
+
+              </div>
+
+            </div>
+
+            <p class="interest-note">
+
+              From the unmistakable Pacer to the dependable Sprinter,
+
+              Britain's diesel railway history is a big part of my passion.
+
+            </p>
+
+          </aside>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- 3. VOLUNTEER JOURNAL -->
+
+    <section class="content-section journal-section" id="journal">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="section-kicker">Notes From The Railway</span>
+
+          <h2>Volunteer Journal</h2>
+
+          <p>
+
+            A record of my railway journey, learning experiences and future
+
+            volunteering milestones.
+
+          </p>
+
+        </div>
+
+        <div class="journal-card">
+
+          <div class="journal-banner">
+
+            <div class="journal-icon" aria-hidden="true">📔</div>
+
+            <div>
+
+              <h3>My Railway Diary</h3>
+
+              <p>
+
+                The beginning of a new chapter in my railway journey.
+
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="timeline">
+
+            <article class="timeline-item">
+
+              <span class="entry-date">My Journey So Far</span>
+
+              <h4>A Passion for British Railways</h4>
+
+              <p>
+
+                Exploring railway history, discovering different train
+
+                classes and building my knowledge of Britain's railways.
+
+              </p>
+
+            </article>
+
+            <article class="timeline-item">
+
+              <span class="entry-date">Looking Ahead · 2027</span>
+
+              <h4>Beginning at the KESR</h4>
+
+              <p>
+
+                Preparing for my volunteering journey at the Kent &amp;
+
+                East Sussex Railway. I'll add updates as my introduction,
+
+                training and volunteering progress.
+
+              </p>
+
+            </article>
+
+            <article class="timeline-item">
+
+              <span class="entry-date">Future Entry</span>
+
+              <h4>My First Volunteering Milestone</h4>
+
+              <p>
+
+                This space is reserved for a future update about what I
+
+                learn, memorable railway moments and experiences working
+
+                alongside railway volunteers.
+
+              </p>
+
+            </article>
+
+          </div>
+
+          <div class="journal-footnote">
+
+            <strong>Journal note:</strong> These are starter entries, not
+
+            records of completed shifts. I'll add genuine updates as my
+
+            volunteering journey progresses.
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- 4. PRIVATE PHOTO GALLERY -->
+
+    <section class="content-section" id="gallery">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="section-kicker">Through My Lens</span>
+
+          <h2>Photo Gallery</h2>
+
+          <p>
+
+            A collection of railway photography, trainspotting memories and
+
+            moments from Britain's railways.
+
+          </p>
+
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+
+          <div class="gallery-item">
+
+            <div class="gallery-placeholder">
+
+              <span aria-hidden="true">🚂</span>
+
+              <strong>Heritage Railways</strong>
+
+              <small>Your photographs will appear here</small>
+
+            </div>
+
+          </div>
+
+          <div class="gallery-item">
+
+            <div class="gallery-placeholder">
+
+              <span aria-hidden="true">🚆</span>
+
+              <strong>Diesel Memories</strong>
+
+              <small>Class 142s, Class 150s and more</small>
+
+            </div>
+
+          </div>
+
+          <div class="gallery-item">
+
+            <div class="gallery-placeholder">
+
+              <span aria-hidden="true">📸</span>
+
+              <strong>Railway Photography</strong>
+
+              <small>Add your favourite shots</small>
+
+            </div>
+
+          </div>
+
+          <div class="gallery-item">
+
+            <div class="gallery-placeholder">
+
+              <span aria-hidden="true">🌿</span>
+
+              <strong>Kent &amp; East Sussex</strong>
+
+              <small>Future railway memories</small>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <p class="gallery-empty-note" id="galleryNote">
+
+          Your gallery is ready for your own railway photographs.
+
+        </p>
+
+        <!-- SIGNAL BOX ADMIN LOGIN -->
+
+        <div class="admin-area">
+
+          <h3>🔐 Signal Box Access</h3>
+
+          <p>
+
+            Gallery administration · Authorised access only
+
+          </p>
+
+          <button
+
+            type="button"
+
+            class="signal-key"
+
+            id="adminLogin"
+
+          >
+
+            <span class="key-symbol" aria-hidden="true">⚿</span>
+
+            Admin Login
+
+          </button>
+
+          <div
+
+            class="login-message"
+
+            id="loginMessage"
+
+            role="status"
+
+            aria-live="polite"
+
+          ></div>
+
+          <!-- HIDDEN UPLOAD TOOL -->
+
+          <div class="upload-panel" id="uploadPanel">
+
+            <h4>📂 Gallery Control Panel</h4>
+
+            <p>
+
+              Choose images from your phone's photo library to display them
+
+              in this gallery.
+
+            </p>
+
+            <label for="photoUpload"><strong>Select photographs</strong></label>
+
+            <input
+
+              class="file-input"
+
+              type="file"
+
+              id="photoUpload"
+
+              accept="image/*"
+
+              multiple
+
+            >
+
+            <div class="upload-actions">
+
+              <button class="small-btn" type="button" id="addPhotos">
+
+                Add to Gallery
+
+              </button>
+
+              <button class="small-btn secondary" type="button" id="logout">
+
+                Lock Panel
+
+              </button>
+
+            </div>
+
+            <p class="upload-status" id="uploadStatus" aria-live="polite"></p>
+
+            <p class="security-note">
+
+              Important: Images added here are displayed in this browser
+
+              session only. They are not automatically uploaded to GitHub
+
+              Pages or saved for other visitors.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <div>
+
+        <div class="footer-title">Hunter Carpenter 🚂</div>
+
+        <p class="footer-copy">
+
+          Built around a passion for Britain's railways.
+
+        </p>
+
+        <p class="footer-copy">
+
+          © <span id="currentYear">2026</span> Hunter Carpenter.
+
+        </p>
+
+      </div>
+
+      <span class="footer-badge">MADE IN SOUTH UK 🇬🇧</span>
+
+    </div>
+
+  </footer>
+
+  <script>
+
+    "use strict";
+
+    /*
+
+     * IMPORTANT SECURITY NOTICE
+
+     *
+
+     * This is a front-end demonstration, NOT secure authentication.
+
+     * The password is visible to anyone who inspects the page source.
+
+     * GitHub Pages is a static hosting service and cannot protect
+
+     * administrator-only features using client-side JavaScript alone.
+
+     *
+
+     * Never use this password gate to protect sensitive information.
+
+     */
+
+    const ADMIN_PASSWORD = "3248";
+
+    const loginButton = document.getElementById("adminLogin");
+
+    const uploadPanel = document.getElementById("uploadPanel");
+
+    const loginMessage = document.getElementById("loginMessage");
+
+    const uploadInput = document.getElementById("photoUpload");
+
+    const addPhotosButton = document.getElementById("addPhotos");
+
+    const logoutButton = document.getElementById("logout");
+
+    const uploadStatus = document.getElementById("uploadStatus");
+
+    const galleryGrid = document.getElementById("galleryGrid");
+
+    const galleryNote = document.getElementById("galleryNote");
+
+    let adminUnlocked = false;
+
+    let pendingFiles = [];
+
+    let previewUrls = [];
+
+    document.getElementById("currentYear").textContent =
+
+      new Date().getFullYear();
+
+    /*
+
+     * LOGIN
+
+     * This prompt is intentionally simple for a single-file demo.
+
+     * It does not provide genuine security.
+
+     */
+
+    loginButton.addEventListener("click", function () {
+
+      if (adminUnlocked) return;
+
+      const password = window.prompt(
+
+        "Signal Box Admin Login\n\nEnter your administrator password:"
+
+      );
+
+      if (password === null) {
+
+        return;
+
+      }
+
+      if (password === ADMIN_PASSWORD) {
+
+        adminUnlocked = true;
+
+        loginButton.style.display = "none";
+
+        uploadPanel.classList.add("visible");
+
+        loginMessage.textContent = "Access Granted — Signal Box Unlocked.";
+
+        loginMessage.style.color = "#004225";
+
+        uploadStatus.textContent =
+
+          "Select photographs from your device to add them to this page.";
+
+      } else {
+
+        loginMessage.textContent = "";
+
+        window.alert("Access Denied");
+
+      }
+
+    });
+
+    /*
+
+     * IMAGE SELECTION
+
+     */
+
+    uploadInput.addEventListener("change", function () {
+
+      if (!adminUnlocked) {
+
+        uploadInput.value = "";
+
+        return;
+
+      }
+
+      pendingFiles = Array.from(uploadInput.files || []).filter(function (file) {
+
+        return file.type.startsWith("image/");
+
+      });
+
+      if (pendingFiles.length > 0) {
+
+        uploadStatus.textContent =
+
+          pendingFiles.length +
+
+          " image(s) selected. Tap Add to Gallery to display them.";
+
+      } else {
+
+        uploadStatus.textContent = "No images selected.";
+
+      }
+
+    });
+
+    /*
+
+     * ADD IMAGES TO THE CURRENT PAGE
+
+     *
+
+     * Object URLs let the browser preview local files without uploading
+
+     * them to a server. The previews disappear when the page is reloaded.
+
+     */
+
+    addPhotosButton.addEventListener("click", function () {
+
+      if (!adminUnlocked) {
+
+        window.alert("Access Denied");
+
+        return;
+
+      }
+
+      if (pendingFiles.length === 0) {
+
+        uploadStatus.textContent =
+
+          "Please select at least one image first.";
+
+        return;
+
+      }
+
+      pendingFiles.forEach(function (file) {
+
+        if (!file.type.startsWith("image/")) {
+
+          return;
+
+        }
+
+        const objectUrl = URL.createObjectURL(file);
+
+        previewUrls.push(objectUrl);
+
+        const item = document.createElement("div");
+
+        item.className = "gallery-item";
+
+        const img = document.createElement("img");
+
+        img.src = objectUrl;
+
+        img.alt = "Railway photograph: " + file.name;
+
+        img.loading = "lazy";
+
+        const caption = document.createElement("div");
+
+        caption.className = "gallery-caption";
+
+        const safeName = file.name.replace(/\.[^/.]+$/, "");
+
+        caption.textContent = safeName || "Railway Photograph";
+
+        item.appendChild(img);
+
+        item.appendChild(caption);
+
+        galleryGrid.appendChild(item);
+
+      });
+
+      galleryNote.textContent =
+
+        "Your selected photographs are now displayed in this page's gallery.";
+
+      uploadStatus.textContent =
+
+        "Photos added to the current page. Remember: they have not been " +
+
+        "published to GitHub Pages.";
+
+      pendingFiles = [];
+
+      uploadInput.value = "";
+
+    });
+
+    /*
+
+     * LOCK THE ADMIN PANEL
+
+     */
+
+    logoutButton.addEventListener("click", function () {
+
+      adminUnlocked = false;
+
+      pendingFiles = [];
+
+      uploadInput.value = "";
+
+      uploadPanel.classList.remove("visible");
+
+      loginButton.style.display = "inline-flex";
+
+      loginMessage.textContent = "Signal Box Locked.";
+
+      uploadStatus.textContent = "";
+
+    });
+
+    /*
+
+     * OPTIONAL CLEANUP
+
+     */
+
+    window.addEventListener("pagehide", function () {
+
+      previewUrls.forEach(function (url) {
+
+        URL.revokeObjectURL(url);
+
+      });
+
+      previewUrls = [];
+
+    });
+
+  </script>
+
+</body>
+
+</html>
