@@ -1,0 +1,1827 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="theme-color" content="#07111e">
+
+  <meta name="description" content="The personal portfolio of Hunter Carpenter, a railway enthusiast with interests in British railway heritage, train simulation, BeamNG.drive and vehicle physics.">
+
+  <title>Hunter Carpenter | Personal Portfolio</title>
+
+  <style>
+
+    :root {
+
+      color-scheme: dark;
+
+      --background: #07111e;
+
+      --surface: #0c1a2a;
+
+      --surface-light: #102338;
+
+      --orange: #ff8b36;
+
+      --blue: #70c8ff;
+
+      --white: #f4f7fb;
+
+      --muted: #a8b7c9;
+
+      --border: #243b52;
+
+      --radius: 18px;
+
+      --width: 1120px;
+
+    }
+
+    * {
+
+      box-sizing: border-box;
+
+      margin: 0;
+
+      padding: 0;
+
+    }
+
+    html {
+
+      scroll-behavior: smooth;
+
+      scroll-padding-top: 100px;
+
+    }
+
+    body {
+
+      background:
+
+        radial-gradient(ellipse at 85% 0%, #142d43 0%, transparent 38%),
+
+        var(--background);
+
+      color: var(--white);
+
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+
+        Roboto, Helvetica, Arial, sans-serif;
+
+      line-height: 1.7;
+
+      -webkit-font-smoothing: antialiased;
+
+    }
+
+    a {
+
+      color: inherit;
+
+      text-decoration: none;
+
+    }
+
+    a:focus-visible {
+
+      outline: 2px solid var(--orange);
+
+      outline-offset: 5px;
+
+    }
+
+    img {
+
+      max-width: 100%;
+
+    }
+
+    .container {
+
+      width: min(var(--width), 90%);
+
+      margin-inline: auto;
+
+    }
+
+    .accent {
+
+      color: var(--orange);
+
+    }
+
+    .muted {
+
+      color: var(--muted);
+
+    }
+
+    .eyebrow {
+
+      color: var(--orange);
+
+      text-transform: uppercase;
+
+      font-size: .76rem;
+
+      font-weight: 800;
+
+      letter-spacing: 2px;
+
+      margin-bottom: 9px;
+
+    }
+
+    h1, h2, h3 {
+
+      line-height: 1.2;
+
+      letter-spacing: -.5px;
+
+    }
+
+    h2 {
+
+      font-size: clamp(1.8rem, 4vw, 2.45rem);
+
+    }
+
+    h3 {
+
+      font-size: 1.15rem;
+
+    }
+
+    p {
+
+      color: var(--muted);
+
+    }
+
+    .section {
+
+      padding-block: 76px;
+
+    }
+
+    .section-intro {
+
+      max-width: 650px;
+
+      margin-bottom: 30px;
+
+    }
+
+    .section-intro p:last-child {
+
+      margin-top: 12px;
+
+    }
+
+    /* Navigation */
+
+    .site-header {
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 20;
+
+      background: rgba(7, 17, 30, .94);
+
+      border-bottom: 1px solid var(--border);
+
+      backdrop-filter: blur(18px);
+
+    }
+
+    .navigation {
+
+      min-height: 76px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 24px;
+
+    }
+
+    .brand {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      font-weight: 850;
+
+      letter-spacing: .2px;
+
+      white-space: nowrap;
+
+    }
+
+    .brand-mark {
+
+      width: 42px;
+
+      height: 42px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 12px;
+
+      background: var(--orange);
+
+      color: #07111e;
+
+      font-size: 1.4rem;
+
+    }
+
+    .brand small {
+
+      display: block;
+
+      color: var(--muted);
+
+      font-size: .69rem;
+
+      font-weight: 500;
+
+      letter-spacing: 1.2px;
+
+      text-transform: uppercase;
+
+    }
+
+    .nav-links {
+
+      display: flex;
+
+      align-items: center;
+
+      flex-wrap: wrap;
+
+      gap: 22px;
+
+      font-size: .88rem;
+
+    }
+
+    .nav-links a {
+
+      color: var(--muted);
+
+      transition: color .2s ease;
+
+    }
+
+    .nav-links a:hover {
+
+      color: var(--orange);
+
+    }
+
+    /* Hero */
+
+    .hero {
+
+      padding-block: 86px 45px;
+
+    }
+
+    .hero-grid {
+
+      display: grid;
+
+      grid-template-columns: 1.15fr .85fr;
+
+      align-items: center;
+
+      gap: 70px;
+
+    }
+
+    .status {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 9px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 999px;
+
+      padding: 6px 12px;
+
+      margin-bottom: 24px;
+
+      color: #d7e6f4;
+
+      font-size: .77rem;
+
+    }
+
+    .status-dot {
+
+      width: 8px;
+
+      height: 8px;
+
+      background: #49d6a0;
+
+      border-radius: 50%;
+
+    }
+
+    .hero h1 {
+
+      font-size: clamp(3rem, 7.5vw, 5.5rem);
+
+      letter-spacing: -3px;
+
+      line-height: .99;
+
+      margin-bottom: 24px;
+
+    }
+
+    .hero h1 span {
+
+      color: var(--orange);
+
+    }
+
+    .hero-description {
+
+      max-width: 600px;
+
+      font-size: 1.05rem;
+
+      margin-bottom: 27px;
+
+    }
+
+    .button-row {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+    }
+
+    .button {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 9px;
+
+      min-height: 45px;
+
+      padding: 10px 19px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 10px;
+
+      font-size: .9rem;
+
+      font-weight: 750;
+
+      transition: transform .2s ease, border-color .2s ease;
+
+    }
+
+    .button:hover {
+
+      transform: translateY(-2px);
+
+      border-color: var(--orange);
+
+    }
+
+    .button-primary {
+
+      color: #17130e;
+
+      background: var(--orange);
+
+      border-color: var(--orange);
+
+    }
+
+    .button-outline {
+
+      background: transparent;
+
+      color: var(--white);
+
+    }
+
+    .portrait-wrap {
+
+      max-width: 390px;
+
+      width: 100%;
+
+      justify-self: center;
+
+      position: relative;
+
+    }
+
+    .portrait-wrap::before {
+
+      content: "";
+
+      position: absolute;
+
+      inset: 18px -16px -16px 18px;
+
+      border: 1px solid var(--orange);
+
+      border-radius: 22px;
+
+      opacity: .75;
+
+    }
+
+    .portrait {
+
+      display: block;
+
+      width: 100%;
+
+      aspect-ratio: 4 / 4.6;
+
+      object-fit: cover;
+
+      object-position: center;
+
+      border-radius: 20px;
+
+      border: 1px solid #40566d;
+
+      background: var(--surface);
+
+      position: relative;
+
+    }
+
+    .photo-fallback {
+
+      display: none;
+
+      min-height: 330px;
+
+      border: 1px dashed var(--border);
+
+      border-radius: 20px;
+
+      background: var(--surface);
+
+      place-items: center;
+
+      text-align: center;
+
+      padding: 25px;
+
+      position: relative;
+
+    }
+
+    .photo-fallback strong {
+
+      display: block;
+
+      margin-bottom: 8px;
+
+    }
+
+    /* Highlights */
+
+    .highlights {
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      border: 1px solid var(--border);
+
+      background: rgba(12, 26, 42, .75);
+
+      border-radius: var(--radius);
+
+      margin-top: 65px;
+
+      overflow: hidden;
+
+    }
+
+    .highlight {
+
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 15px;
+
+      padding: 24px;
+
+      border-right: 1px solid var(--border);
+
+    }
+
+    .highlight:last-child {
+
+      border-right: 0;
+
+    }
+
+    .highlight-icon {
+
+      font-size: 1.5rem;
+
+      line-height: 1.4;
+
+    }
+
+    .highlight strong {
+
+      display: block;
+
+      margin-bottom: 3px;
+
+    }
+
+    .highlight p {
+
+      font-size: .85rem;
+
+    }
+
+    /* About */
+
+    .about-grid {
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 45px;
+
+      align-items: start;
+
+    }
+
+    .about-copy p + p {
+
+      margin-top: 16px;
+
+    }
+
+    .info-card {
+
+      border: 1px solid var(--border);
+
+      background: linear-gradient(145deg, var(--surface-light), var(--surface));
+
+      border-radius: var(--radius);
+
+      padding: 27px;
+
+    }
+
+    .info-card h3 {
+
+      margin-bottom: 17px;
+
+    }
+
+    .interest-list {
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 11px;
+
+    }
+
+    .interest {
+
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 10px;
+
+      padding: 12px;
+
+      border: 1px solid #243b52;
+
+      border-radius: 10px;
+
+      background: #07111e70;
+
+      font-size: .88rem;
+
+      color: #dce6f1;
+
+    }
+
+    .interest span {
+
+      flex-shrink: 0;
+
+    }
+
+    /* Interest feature cards */
+
+    .feature-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+
+      gap: 20px;
+
+    }
+
+    .feature {
+
+      border: 1px solid var(--border);
+
+      background: linear-gradient(150deg, #102338, #091725);
+
+      border-radius: var(--radius);
+
+      padding: 28px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: flex-start;
+
+      min-height: 270px;
+
+    }
+
+    .feature-symbol {
+
+      width: 49px;
+
+      height: 49px;
+
+      display: grid;
+
+      place-items: center;
+
+      background: #ff8b3617;
+
+      border: 1px solid #8e512b;
+
+      border-radius: 13px;
+
+      font-size: 1.5rem;
+
+      margin-bottom: 20px;
+
+    }
+
+    .feature h3 {
+
+      margin-bottom: 10px;
+
+    }
+
+    .feature p {
+
+      margin-bottom: 22px;
+
+      font-size: .94rem;
+
+    }
+
+    .text-link {
+
+      margin-top: auto;
+
+      color: var(--orange);
+
+      font-weight: 750;
+
+      font-size: .9rem;
+
+    }
+
+    .text-link:hover {
+
+      text-decoration: underline;
+
+    }
+
+    .note {
+
+      font-size: .8rem;
+
+      margin-top: 18px;
+
+    }
+
+    /* Journey */
+
+    .journey-layout {
+
+      display: grid;
+
+      grid-template-columns: .8fr 1.2fr;
+
+      gap: 35px;
+
+      align-items: start;
+
+    }
+
+    .timeline {
+
+      border-left: 2px solid #7e4d2b;
+
+      margin: 8px 0 0 8px;
+
+      padding-left: 25px;
+
+    }
+
+    .timeline-item {
+
+      position: relative;
+
+      padding-bottom: 30px;
+
+    }
+
+    .timeline-item:last-child {
+
+      padding-bottom: 0;
+
+    }
+
+    .timeline-item::before {
+
+      content: "";
+
+      position: absolute;
+
+      width: 12px;
+
+      height: 12px;
+
+      left: -32px;
+
+      top: 7px;
+
+      background: var(--orange);
+
+      border: 3px solid var(--background);
+
+      border-radius: 50%;
+
+    }
+
+    .timeline-item strong {
+
+      display: block;
+
+      margin-bottom: 6px;
+
+    }
+
+    .timeline-item p {
+
+      font-size: .92rem;
+
+    }
+
+    .railway-panel {
+
+      background:
+
+        linear-gradient(115deg, rgba(7,17,30,.97), rgba(7,17,30,.80)),
+
+        url("https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=1200&q=85")
+
+        center / cover;
+
+      border: 1px solid var(--border);
+
+      border-radius: var(--radius);
+
+      padding: 32px;
+
+    }
+
+    .railway-panel h3 {
+
+      font-size: 1.5rem;
+
+      margin-bottom: 13px;
+
+    }
+
+    .railway-panel p {
+
+      margin-bottom: 20px;
+
+    }
+
+    /* Goals */
+
+    .goals-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+
+      gap: 16px;
+
+    }
+
+    .goal {
+
+      border: 1px solid var(--border);
+
+      border-radius: 14px;
+
+      background: var(--surface);
+
+      padding: 24px;
+
+    }
+
+    .goal-number {
+
+      color: var(--orange);
+
+      font-size: 1.65rem;
+
+      font-weight: 850;
+
+      margin-bottom: 13px;
+
+    }
+
+    .goal h3 {
+
+      margin-bottom: 9px;
+
+    }
+
+    .goal p {
+
+      font-size: .9rem;
+
+    }
+
+    /* Contact */
+
+    .closing-card {
+
+      border: 1px solid var(--border);
+
+      border-radius: 20px;
+
+      padding: clamp(25px, 5vw, 48px);
+
+      background:
+
+        radial-gradient(ellipse at right top, #19344c, transparent 65%),
+
+        var(--surface);
+
+    }
+
+    .closing-card p {
+
+      max-width: 680px;
+
+      margin: 14px 0 22px;
+
+    }
+
+    /* Footer */
+
+    footer {
+
+      border-top: 1px solid var(--border);
+
+      padding: 25px 0;
+
+    }
+
+    .footer-inner {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 15px;
+
+      flex-wrap: wrap;
+
+    }
+
+    footer p {
+
+      font-size: .8rem;
+
+    }
+
+    .footer-brand {
+
+      color: var(--white);
+
+      font-weight: 750;
+
+    }
+
+    .footer-note {
+
+      width: 100%;
+
+      border-top: 1px solid #1b2c3e;
+
+      margin-top: 10px;
+
+      padding-top: 15px;
+
+    }
+
+    /* Mobile layout */
+
+    @media (max-width: 800px) {
+
+      .navigation {
+
+        padding-block: 13px;
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 12px;
+
+      }
+
+      .nav-links {
+
+        width: 100%;
+
+        flex-wrap: nowrap;
+
+        overflow-x: auto;
+
+        padding: 3px 0 7px;
+
+        gap: 20px;
+
+      }
+
+      .nav-links a {
+
+        white-space: nowrap;
+
+      }
+
+      .hero {
+
+        padding-top: 48px;
+
+      }
+
+      .hero-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+      }
+
+      .hero h1 {
+
+        font-size: clamp(3rem, 13vw, 5rem);
+
+        letter-spacing: -2px;
+
+      }
+
+      .portrait-wrap {
+
+        max-width: 330px;
+
+      }
+
+      .highlights {
+
+        grid-template-columns: 1fr;
+
+        margin-top: 48px;
+
+      }
+
+      .highlight {
+
+        border-right: 0;
+
+        border-bottom: 1px solid var(--border);
+
+      }
+
+      .highlight:last-child {
+
+        border-bottom: 0;
+
+      }
+
+      .about-grid,
+
+      .journey-layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+
+      }
+
+      .section {
+
+        padding-block: 52px;
+
+      }
+
+      .goals-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+    }
+
+    @media (max-width: 520px) {
+
+      .container {
+
+        width: 91%;
+
+      }
+
+      .feature-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+      .interest-list {
+
+        grid-template-columns: 1fr;
+
+      }
+
+      .info-card,
+
+      .feature,
+
+      .railway-panel {
+
+        padding: 21px;
+
+      }
+
+      .hero-description {
+
+        font-size: .98rem;
+
+      }
+
+      .button-row .button {
+
+        width: 100%;
+
+      }
+
+      .footer-inner {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+      }
+
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+
+        scroll-behavior: auto;
+
+      }
+
+      *, *::before, *::after {
+
+        transition-duration: 0s !important;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+  <div class="container navigation">
+
+    <a class="brand" href="#home" aria-label="Hunter Carpenter home">
+
+      <span class="brand-mark" aria-hidden="true">H</span>
+
+      <span>
+
+        HUNTER CARPENTER
+
+        <small>Personal portfolio</small>
+
+      </span>
+
+    </a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+
+      <a href="#home">Home</a>
+
+      <a href="#about">About</a>
+
+      <a href="#interests">Interests</a>
+
+      <a href="#journey">Railway journey</a>
+
+      <a href="#goals">Goals</a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+<main>
+
+  <!-- INTRODUCTION -->
+
+  <section class="hero" id="home">
+
+    <div class="container">
+
+      <div class="hero-grid">
+
+        <div>
+
+          <div class="status">
+
+            <span class="status-dot"></span>
+
+            Personal portfolio · South UK
+
+          </div>
+
+          <p class="eyebrow">Welcome to my portfolio</p>
+
+          <h1>Hunter<br><span>Carpenter.</span></h1>
+
+          <p class="hero-description">
+
+            I'm a railway enthusiast with a passion for British
+
+            railway history, train simulation and the engineering
+
+            behind vehicles. This website is a place to share my
+
+            interests, document my ambitions and follow my journey
+
+            as I learn more about the things I enjoy.
+
+          </p>
+
+          <div class="button-row">
+
+            <a class="button button-primary" href="#interests">
+
+              Explore my interests <span aria-hidden="true">↗</span>
+
+            </a>
+
+            <a class="button button-outline" href="#about">
+
+              About me
+
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="portrait-wrap">
+
+          <img
+
+            class="portrait"
+
+            src="eda560ff-c2e4-4dd6-8f64-212218a06fde.jpeg"
+
+            alt="Portrait of Hunter Carpenter"
+
+            onerror="this.style.display='none';this.nextElementSibling.style.display='grid';"
+
+          >
+
+          <div class="photo-fallback">
+
+            <div>
+
+              <div style="font-size:3rem;margin-bottom:12px" aria-hidden="true">H</div>
+
+              <strong>Hunter Carpenter</strong>
+
+              <p>Upload your portrait beside index.html using the filename referenced in the code.</p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="highlights">
+
+        <div class="highlight">
+
+          <span class="highlight-icon" aria-hidden="true">🚆</span>
+
+          <div>
+
+            <strong>Railways</strong>
+
+            <p>History, trains and railway preservation</p>
+
+          </div>
+
+        </div>
+
+        <div class="highlight">
+
+          <span class="highlight-icon" aria-hidden="true">🎮</span>
+
+          <div>
+
+            <strong>Simulation</strong>
+
+            <p>Train simulators and BeamNG.drive</p>
+
+          </div>
+
+        </div>
+
+        <div class="highlight">
+
+          <span class="highlight-icon" aria-hidden="true">🎯</span>
+
+          <div>
+
+            <strong>Looking ahead</strong>
+
+            <p>Learning, development and future volunteering</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section class="section" id="about">
+
+    <div class="container about-grid">
+
+      <div class="about-copy">
+
+        <div class="section-intro">
+
+          <p class="eyebrow">01 · About</p>
+
+          <h2>A little about me.</h2>
+
+        </div>
+
+        <p>
+
+          Hi, I'm Hunter. I'm 13 and based in the South of England.
+
+          I've been fascinated by railways for years, from the
+
+          trains themselves to their history, design and operation.
+
+        </p>
+
+        <p>
+
+          Outside my interest in railways, I enjoy driving and
+
+          vehicle simulation games, especially exploring how vehicles
+
+          behave and how simulation can recreate real-world systems.
+
+        </p>
+
+        <p>
+
+          I'm always interested in learning new things, discovering
+
+          more about engineering and transport, and building my
+
+          knowledge through the hobbies I enjoy.
+
+        </p>
+
+      </div>
+
+      <div class="info-card">
+
+        <h3>Areas I'm interested in</h3>
+
+        <div class="interest-list">
+
+          <div class="interest"><span>🚆</span> British railways</div>
+
+          <div class="interest"><span>📜</span> Railway history</div>
+
+          <div class="interest"><span>🚦</span> Signalling</div>
+
+          <div class="interest"><span>🛠️</span> Engineering</div>
+
+          <div class="interest"><span>🚗</span> Vehicle physics</div>
+
+          <div class="interest"><span>🖥️</span> Simulation games</div>
+
+          <div class="interest"><span>🌳</span> Heritage railways</div>
+
+          <div class="interest"><span>📚</span> Learning and development</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- INTERESTS -->
+
+  <section class="section" id="interests">
+
+    <div class="container">
+
+      <div class="section-intro">
+
+        <p class="eyebrow">02 · My interests</p>
+
+        <h2>Transport, technology & simulation.</h2>
+
+        <p>
+
+          Two sides of my interests: exploring the railway world
+
+          and discovering the engineering of vehicles through games.
+
+        </p>
+
+      </div>
+
+      <div class="feature-grid">
+
+        <article class="feature">
+
+          <div class="feature-symbol" aria-hidden="true">🚆</div>
+
+          <h3>Railways & railway heritage</h3>
+
+          <p>
+
+            I'm fascinated by Britain's railways, including historic
+
+            locomotives, modern trains, signalling, railway operations
+
+            and the preservation of railway history. I enjoy learning
+
+            about the people and engineering that keep the railway
+
+            world moving.
+
+          </p>
+
+          <a class="text-link" href="#journey">
+
+            My railway journey →
+
+          </a>
+
+        </article>
+
+        <article class="feature">
+
+          <div class="feature-symbol" aria-hidden="true">🚗</div>
+
+          <h3>BeamNG.drive & vehicle physics</h3>
+
+          <p>
+
+            BeamNG.drive interests me because of its detailed
+
+            soft-body vehicle physics and realistic vehicle behaviour.
+
+            I enjoy the automotive side of simulation, from exploring
+
+            how vehicles handle to experimenting with driving,
+
+            vehicle damage and different scenarios.
+
+          </p>
+
+          <a
+
+            class="text-link"
+
+            href="https://www.beamng.com/"
+
+            target="_blank"
+
+            rel="noopener noreferrer"
+
+          >
+
+            Visit the official BeamNG website ↗
+
+          </a>
+
+        </article>
+
+        <article class="feature">
+
+          <div class="feature-symbol" aria-hidden="true">🕹️</div>
+
+          <h3>Train simulation</h3>
+
+          <p>
+
+            Train simulators let me explore railway driving,
+
+            routes and operations in an interactive environment.
+
+            They combine my interest in trains with learning about
+
+            how railway systems work.
+
+          </p>
+
+        </article>
+
+        <article class="feature">
+
+          <div class="feature-symbol" aria-hidden="true">⚙️</div>
+
+          <h3>Engineering & technology</h3>
+
+          <p>
+
+            I'm interested in how machines work, how software
+
+            recreates real-world systems and how technology can
+
+            be used to create more immersive simulation experiences.
+
+          </p>
+
+        </article>
+
+      </div>
+
+      <p class="note">
+
+        BeamNG.drive is an independent vehicle simulation game.
+
+        This personal website is not affiliated with or endorsed
+
+        by BeamNG GmbH.
+
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- RAILWAY JOURNEY -->
+
+  <section class="section" id="journey">
+
+    <div class="container journey-layout">
+
+      <div>
+
+        <div class="section-intro">
+
+          <p class="eyebrow">03 · Railway journey</p>
+
+          <h2>Learning today. Looking ahead.</h2>
+
+          <p>
+
+            My interest in railways continues to grow, and I hope
+
+            to turn that enthusiasm into useful experience.
+
+          </p>
+
+        </div>
+
+        <div class="timeline">
+
+          <div class="timeline-item">
+
+            <strong>Building my knowledge</strong>
+
+            <p>
+
+              Learning about British railway history, train classes,
+
+              railway operations and signalling.
+
+            </p>
+
+          </div>
+
+          <div class="timeline-item">
+
+            <strong>Exploring heritage railways</strong>
+
+            <p>
+
+              Discovering how preserved railways maintain historic
+
+              railway equipment, traditions and experiences.
+
+            </p>
+
+          </div>
+
+          <div class="timeline-item">
+
+            <strong>Looking towards 2027</strong>
+
+            <p>
+
+              Looking forward to my planned volunteering journey
+
+              with the Kent & East Sussex Railway, subject to its
+
+              arrangements and requirements.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <article class="railway-panel">
+
+        <p class="eyebrow">A future ambition</p>
+
+        <h3>Kent & East Sussex Railway</h3>
+
+        <p>
+
+          The Kent & East Sussex Railway is a heritage railway
+
+          that forms part of my railway interests. I'm looking
+
+          forward to learning more about heritage railway
+
+          operations, teamwork and the history behind preserved
+
+          railways as I work towards my volunteering ambitions.
+
+        </p>
+
+        <a
+
+          class="button button-primary"
+
+          href="https://kesr.org.uk/"
+
+          target="_blank"
+
+          rel="noopener noreferrer"
+
+        >
+
+          Official KESR website ↗
+
+        </a>
+
+      </article>
+
+    </div>
+
+  </section>
+
+  <!-- GOALS -->
+
+  <section class="section" id="goals">
+
+    <div class="container">
+
+      <div class="section-intro">
+
+        <p class="eyebrow">04 · Goals</p>
+
+        <h2>What I'm working towards.</h2>
+
+        <p>
+
+          My interests give me plenty to explore. These are the
+
+          principles I'd like to keep building on.
+
+        </p>
+
+      </div>
+
+      <div class="goals-grid">
+
+        <article class="goal">
+
+          <div class="goal-number">01</div>
+
+          <h3>Keep learning</h3>
+
+          <p>
+
+            Expand my understanding of railways, vehicle engineering,
+
+            simulation and the technology behind them.
+
+          </p>
+
+        </article>
+
+        <article class="goal">
+
+          <div class="goal-number">02</div>
+
+          <h3>Gain experience</h3>
+
+          <p>
+
+            Work towards future volunteering opportunities and
+
+            learn from people with experience in the railway world.
+
+          </p>
+
+        </article>
+
+        <article class="goal">
+
+          <div class="goal-number">03</div>
+
+          <h3>Develop my interests</h3>
+
+          <p>
+
+            Continue exploring transport and simulation while
+
+            sharing my enthusiasm and learning along the way.
+
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CLOSING -->
+
+  <section class="section" id="contact">
+
+    <div class="container">
+
+      <div class="closing-card">
+
+        <p class="eyebrow">Thank you</p>
+
+        <h2>Thanks for taking a look.</h2>
+
+        <p>
+
+          This portfolio is a snapshot of my interests and ambitions.
+
+          As I learn more about railways, simulation and engineering,
+
+          I hope to keep developing my knowledge and experiences.
+
+        </p>
+
+        <a class="button button-outline" href="#home">
+
+          Back to the top ↑
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+
+  <div class="container footer-inner">
+
+    <p class="footer-brand">Hunter Carpenter</p>
+
+    <p>Personal portfolio · South UK</p>
+
+    <p class="footer-note">
+
+      © <span id="year">2026</span> Hunter Carpenter.
+
+      An independent personal website, not an official KESR website
+
+      and not affiliated with BeamNG GmbH.
+
+    </p>
+
+  </div>
+
+</footer>
+
+<script>
+
+  document.getElementById("year").textContent =
+
+    new Date().getFullYear();
+
+</script>
+
+</body>
+
+</html>
